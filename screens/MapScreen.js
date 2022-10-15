@@ -5,7 +5,7 @@ import { addPlace, importPlaces } from '../reducers/user';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
 
-const url = 'locapicback.vercel.app'
+const url = 'https://locapicback.vercel.app'
 
 export default function MapScreen() {
   const dispatch = useDispatch();
@@ -90,7 +90,7 @@ export default function MapScreen() {
     setNewPlace('');
   };
 
-  const markers = myMarkers.map((data, i) => {
+  const markers = user.places.map((data, i) => {
     return <Marker key={i} coordinate={{ latitude: Number(data.latitude), longitude: Number(data.longitude) }} title={data.name} />;
   });
 

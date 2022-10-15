@@ -11,7 +11,7 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { useDispatch, useSelector } from 'react-redux';
 import { addPlace, removePlace } from '../reducers/user';
-const url = 'locapicback.vercel.app'
+const url = 'https://locapicback.vercel.app'
 export default function PlacesScreen() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
